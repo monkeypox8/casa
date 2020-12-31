@@ -48,12 +48,16 @@ class CaseContactDecorator < Draper::Decorator
     ].compact.join(" | ")
   end
 
-  def notes
+  def paragraph_notes
     if object.notes && object.notes.length > CaseContactDecorator::NOTES_CHARACTER_LIMIT
       helpers.content_tag(:p, limited_notes)
     else
       helpers.simple_format(full_notes)
     end
+  end
+
+  def plain_notes
+    object.notes
   end
 
   def contact_types

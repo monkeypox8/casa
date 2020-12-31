@@ -46,7 +46,7 @@ class CaseContactReport
       creator_email: case_contact&.creator&.email,
       creator_name: case_contact&.creator&.display_name,
       supervisor_name: case_contact&.creator&.supervisor&.display_name,
-      case_contact_notes: case_contact&.notes
+      case_contact_notes: case_contact&.plain_notes
     }
   end
 end

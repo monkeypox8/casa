@@ -38,7 +38,7 @@
             <br>
             <%= " - Medium Type: #{recent_contact&.medium_type}" %>
             <br>
-            <%= " - Notes: #{recent_contact&.notes}" %>
+            <%= " - Notes: #{recent_contact&.decorate&.plain_notes}" %>
           <% else %>
             No contact attempts for this week.
           <% end %>
